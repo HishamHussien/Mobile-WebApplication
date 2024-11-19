@@ -1,0 +1,61 @@
+﻿@model Mobile_WebApplication.Models.items
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>items</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.itemname)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.itemname)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.info)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.info)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.itemsquantity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.itemsquantity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.price)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cataid)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cataid)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.company)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.company)
+        </dd>
+
+        <dd>
+            <img src="~/images/@Model.imgfile" height="150" />
+            <br />@Model.imgfile
+
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

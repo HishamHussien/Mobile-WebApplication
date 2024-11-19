@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "emailtst";
+}
+
+<h1>send mail</h1>
+<body>
+    <form asp-action="emailtst">
+        <div class="form-group">
+            <label class="control-label"> email address</label>
+            <input name="emailaddress" class="form-control" /> <br />
+
+        </div>
+
+        <div class="form-group">
+            <label class="control-label"> subject</label>
+            <input name="subject" class="form-control" /> <br />
+
+        </div>
+
+        <div class="form-group">
+            <label class="control-label"> message</label>
+            <input name="message" class="form-control" /> <br />
+
+        </div>
+        <input type="submit" value="Send" class="btn btn-success" />
+        <p> @ViewData["message"]</p>
+
+    </form>
+
+</body>
+
